@@ -1,19 +1,25 @@
 ---
+
+
+
 let EducationInfo = [
     {
         institution: "CertiProf",
         date: "Abril 2023",
         title: "Scrum Foundation Professional Certificate SFPC",
+        href:"../../public/certificate.pdf"
     },
     {
         institution: "Servicio Nacional de Aprendizaje SENA",
-        date: "Junio 2019 - Diciembre 2019",
+        date: "Junio 2019 - Noviembre 2020",
         title: "Técnico en programación de software",
+        href:"../../public/certificadosena.pdf"
     },
     {
         institution: "Servicio Nacional de Aprendizaje SENA",
-        date: "Junio 2019 - Diciembre 2019",
+        date: "Junio 2019 - Noviembre 2020",
         title: "English dot works beginner Inglish",
+        href:"../../public/certificate.pdf"
     },
 ];
 ---
@@ -36,7 +42,7 @@ let EducationInfo = [
         <ul class="group/list">
             {
                 EducationInfo.map((deg, i) => {
-                    let { title, institution, date } = deg;
+                    let { title, institution, date,href } = deg;
                     return (
                         <li class="mb-12">
                             <div
@@ -65,7 +71,7 @@ let EducationInfo = [
                                     <h3 class="-mt-1">
                                         <a
                                             class="inline-flex items-baseline font-light leading-tight text-slate-200 hover:text-orange-500 focus-visible:text-orange-500 group/link text-base"
-                                            href="https://upstatement.com/blog/integrating-algolia-search-with-wordpress-multisite/"
+                                            href={href}
                                             target="_blank"
                                             rel="noreferrer noopener"
                                             aria-label="Integrating Algolia Search with WordPress Multisite (opens in a new tab)"
