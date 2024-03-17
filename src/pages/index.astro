@@ -8,7 +8,7 @@ import Footer from '../components/shared/Footer.astro';
 import Header from '../components/shared/Header.astro';
 ---
 
-<Layout title="Portfolio">
+<Layout title="Camilo López">
 	<main class="relative">
 		<div
 			class="fixed inset-0 z-30 transition duration-300 lg:absolute bubble"
@@ -32,6 +32,8 @@ import Header from '../components/shared/Header.astro';
 	</main>
 </Layout>
 <script type="text/javascript">
+
+
 	document.addEventListener("DOMContentLoaded", () => {
 		const bubble = document.getElementById("bubble");
 
@@ -52,7 +54,7 @@ import Header from '../components/shared/Header.astro';
 			const gradientY = bubbleRect.height / 2 + distanceY;
 
 			// Aplica el gradiente radial al fondo del div luminoso
-			bubble.style.background = `radial-gradient(circle at ${gradientX}px ${gradientY}px, #35394380, transparent 35%)`;
+			bubble.style.background = `radial-gradient(circle at ${gradientX}px ${gradientY}px, #35394380, transparent 45%)`;
 		});
 	});
 </script>

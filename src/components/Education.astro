@@ -7,19 +7,23 @@ let EducationInfo = [
         institution: "CertiProf",
         date: "Abril 2023",
         title: "Scrum Foundation Professional Certificate SFPC",
-        href:"../../public/certificate.pdf"
+        href:"/certificate.pdf",
+        image:"/certiproflogo.png"
     },
     {
         institution: "Servicio Nacional de Aprendizaje SENA",
         date: "Junio 2019 - Noviembre 2020",
         title: "Técnico en programación de software",
-        href:"../../public/certificadosena.pdf"
+        href:"/certificadosena.pdf",
+        image:"/senalogo.png"
+
     },
     {
         institution: "Servicio Nacional de Aprendizaje SENA",
         date: "Junio 2019 - Noviembre 2020",
         title: "English dot works beginner Inglish",
-        href:"../../public/certificate.pdf"
+        href:"/certificate.pdf",
+        image:"/senalogo.png"
     },
 ];
 ---
@@ -30,7 +34,7 @@ let EducationInfo = [
     aria-label="Blog posts"
 >
     <div
-        class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
+        class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-transparent px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
     >
         <h2
             class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only"
@@ -42,7 +46,7 @@ let EducationInfo = [
         <ul class="group/list">
             {
                 EducationInfo.map((deg, i) => {
-                    let { title, institution, date,href } = deg;
+                    let { title, institution, date,href, image } = deg;
                     return (
                         <li class="mb-12">
                             <div
@@ -61,8 +65,8 @@ let EducationInfo = [
                                     data-nimg="1"
                                     class="z-10 col-span-2 rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:col-span-2"
                                     style="color:transparent"
-                                    srcset="/_next/image?url=%2Fimages%2Fwriting%2Falgolia-search.jpeg&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fwriting%2Falgolia-search.jpeg&w=640&q=75 2x"
-                                    src="/_next/image?url=%2Fimages%2Fwriting%2Falgolia-search.jpeg&w=640&q=75"
+                                    srcset={image}
+                                    src={image}
                                 />
                                 <div class="z-10 col-span-6">
                                     <p class="-mt-1 text-sm font-semibold leading-6">
@@ -70,7 +74,7 @@ let EducationInfo = [
                                     </p>
                                     <h3 class="-mt-1">
                                         <a
-                                            class="inline-flex items-baseline font-light leading-tight text-slate-200 hover:text-orange-500 focus-visible:text-orange-500 group/link text-base"
+                                            class="inline-flex items-baseline font-thin  hover:font-light leading-tight text-slate-200 hover:text-orange-500 focus-visible:text-orange-500 group/link text-base"
                                             href={href}
                                             target="_blank"
                                             rel="noreferrer noopener"
