@@ -13,11 +13,30 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Frontend Developer apasionado, meticuloso en píxeles, construyo experiencias digitales." />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/avatar.svg" />
+		<meta name="robots" content="Index" />
+		<meta name="Content-Type" content="text/html;charset=utf-8" />
+        <meta name="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<meta name="title" content={title} />
+
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://camilolopez.vercel.app/" />
+		<meta property="og:title" content="Camilo Lopez - Frontend Developer" />
+		<meta property="og:description" content="Frontend Developer apasionado, meticuloso en píxeles, construyo experiencias digitales. " />
+		<meta property="og:image" content="https://camilolopez.vercel.app/avatar.svg" />
+
+
+		<meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://camilolopez.vercel.app/" />
+        <meta property="twitter:title" content="Camilo Lopez - Frontend Developer" />
+        <meta property="twitter:description" content="Frontend Developer apasionado, meticuloso en píxeles, construyo experiencias digitales." />
+        <meta property="twitter:image" content="https://camilolopez.vercel.app/avatar.svg" />
+		
 	</head>
 	<body class="bg-gray-900 leading-relaxed text-slate-400 antialiased selection:bg-orange-400 selection:text-black">
 		<slot />
