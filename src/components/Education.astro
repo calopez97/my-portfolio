@@ -4,6 +4,13 @@
 
 let EducationInfo = [
     {
+        institution: "Universidad Manuela Beltrán",
+        date: "Enero 2026 - Actualidad*",
+        title: "Ingenieria de Software",
+        href:"https://umb.edu.co",
+        image:"https://i.ytimg.com/vi/Wg_-elO-kWM/maxresdefault.jpg"
+    },
+    {
         institution: "CertiProf",
         date: "Abril 2023",
         title: "Scrum Foundation Professional Certificate SFPC",
@@ -69,12 +76,10 @@ let EducationInfo = [
                                     src={image}
                                 />
                                 <div class="z-10 col-span-6">
-                                    <p class="-mt-1 text-sm font-semibold leading-6">
-                                        {date}
-                                    </p>
+                                    
                                     <h3 class="-mt-1">
                                         <a
-                                            class="inline-flex items-baseline font-thin  hover:font-light leading-tight text-slate-200 hover:text-orange-500 focus-visible:text-orange-500 group/link text-base"
+                                            class="inline-flex items-baseline font-light hover:font-light leading-tight text-slate-200 hover:text-orange-500 focus-visible:text-orange-500 group/link text-base"
                                             href={href}
                                             target="_blank"
                                             rel="noreferrer noopener"
@@ -95,12 +100,15 @@ let EducationInfo = [
                                                         clip-rule="evenodd">
                                                     </path>
                                                 </svg>                                                
-                                                <span class="inline-block">{institution}
+                                                <span class="block pb-2">{institution}
                                                     
                                                 </span>
                                             </span>
                                         </a>
                                     </h3>
+                                    <p class="-mt-1 text-sm font-semibold leading-6">
+                                        {date}
+                                    </p>
                                 </div>
                             </div>
                         </li>
